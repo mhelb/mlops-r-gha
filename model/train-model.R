@@ -31,6 +31,7 @@ ws <- get_workspace(WSNAME,
 cat("Found workspace\n")
 
 compute_target <- get_compute(ws, cluster_name = CLUSTER_NAME)
+
 if (is.null(compute_target)) {
   vm_size <- "STANDARD_D2_V2" 
   compute_target <- create_aml_compute(workspace = ws,
