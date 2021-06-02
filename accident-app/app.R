@@ -94,6 +94,7 @@ server <- function(input, output) {
   
   output$prediction <- renderText({pred()})
   
+  # Blue output bar
   output$barchart <- renderPlot({
     p <- pred()
     pp <- formatC(p, format="f", digits=2, width=5)
